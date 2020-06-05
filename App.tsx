@@ -7,8 +7,9 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import {
   SafeAreaView,
   StyleSheet,
@@ -20,7 +21,7 @@ import {
 
 const App = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
         <ScrollView
@@ -31,7 +32,7 @@ const App = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </NavigationContainer>
   );
 };
 
