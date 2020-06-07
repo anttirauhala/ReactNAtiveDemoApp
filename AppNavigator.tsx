@@ -1,19 +1,32 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import Home from './screens/Home';
-import Red from './screens/Red';
-import Yellow from './screens/Yellow';
-import Green from './screens/Green';
+import AntDesignIcon from 'react-native-vector-icons/AntDesign';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import HomeTab from './screens/HomeTab';
+import stackNavigator from './StackNavigator';
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-const AppNavigator = () => (
-  <Stack.Navigator initialRouteName="Home">
-    <Stack.Screen name="Home" component={Home} />
-    <Stack.Screen name="Red" component={Red} />
-    <Stack.Screen name="Yellow" component={Yellow} />
-    <Stack.Screen name="Green" component={Green} />
-  </Stack.Navigator>
+const AppTabNavigator = () => (
+  <Tab.Navigator
+    screenOptions={({route}) => ({
+      tabBarIcon: ({focused, color, size}) => {
+        let iconName = '';
+
+        if (route.name === 'Home') {
+          iconName = 'home';
+        } else if (route.name === 'StackDemo') {
+          iconName = 'CodeSandbox';
+        }
+        return <AntDesignIcon name={iconName} size={size} color={color} />;
+      },
+    })}
+    tabBarOptions={{
+      activeTintColor: 'tomato',
+      inactiveTintColor: 'gray',
+    }}>
+    <Tab.Screen name="Home" component={HomeTab} />
+    <Tab.Screen name="StackDemo" component={stackNavigator} />
+  </Tab.Navigator>
 );
 
-export default AppNavigator;
+export default AppTabNavigator;

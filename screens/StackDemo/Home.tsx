@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import styles from '../styles';
-import TopButtons from '../components/TopButtons';
-import NavigationLevelIndicator from '../components/NavigationLevelIndicator';
+import styles from '../../styles';
+import TopButtons from '../../components/TopButtons';
+import NavigationLevelIndicator from '../../components/NavigationLevelIndicator';
 
 interface Props {
   navigation: any;

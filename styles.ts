@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
   mainText: {
     fontSize: 16,
     color: 'black',
+    padding: 20,
   },
   defaultBackground: {
     backgroundColor: '#ffffff',

@@ -10,7 +10,7 @@ const TopButtons = () => {
   return (
     <View style={styles.container}>
       <Button
-        text={'Pop most upper screen'}
+        text={'Navigate back'}
         onPress={() => {
           if (navigation.canGoBack()) {
             navigation.goBack();
