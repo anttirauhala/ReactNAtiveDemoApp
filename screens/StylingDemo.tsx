@@ -1,7 +1,6 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import mainStyles from '../styles';
-import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export default class StylingDemo extends React.Component<any> {
   render() {
