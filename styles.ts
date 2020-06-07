@@ -10,11 +10,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
   },
-  scrollContent: {
-    flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   scrollView: {
     backgroundColor: 'lightblue',
   },

@@ -5,6 +5,7 @@ import HomeTab from './screens/HomeTab';
 import ScrollDemo from './screens/ScrollDemo';
 import stackNavigator from './StackNavigator';
 import StylingDemo from './screens/StylingDemo';
+import FormDemo from './screens/FormDemo';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,6 +23,8 @@ const AppTabNavigator = () => (
           iconName = 'angle-double-down';
         } else if (route.name === 'StylingDemo') {
           iconName = 'pencil-square-o';
+        } else if (route.name === 'FormDemo') {
+          iconName = 'wpforms';
         }
         return <FontAwesomeIcon name={iconName} size={size} color={color} />;
       },
@@ -34,6 +37,7 @@ const AppTabNavigator = () => (
     <Tab.Screen name="StackDemo" component={stackNavigator} />
     <Tab.Screen name="ScrollDemo" component={ScrollDemo} />
     <Tab.Screen name="StylingDemo" component={StylingDemo} />
+    <Tab.Screen name="FormDemo" component={FormDemo} />
   </Tab.Navigator>
 );
 
