@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, ScrollView, StyleSheet} from 'react-native';
 import mainStyles from '../styles';
 
-export default class HomeTab extends React.Component<any> {
+export default class ScrollDemo extends React.Component<any> {
   render() {
     return (
       <View style={[mainStyles.container, mainStyles.defaultBackground]}>
