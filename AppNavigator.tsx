@@ -1,7 +1,8 @@
 import React from 'react';
-import AntDesignIcon from 'react-native-vector-icons/AntDesign';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeTab from './screens/HomeTab';
+import ScrollDemo from './screens/ScrollDemo';
 import stackNavigator from './StackNavigator';
 
 const Tab = createBottomTabNavigator();
@@ -15,9 +16,11 @@ const AppTabNavigator = () => (
         if (route.name === 'Home') {
           iconName = 'home';
         } else if (route.name === 'StackDemo') {
-          iconName = 'CodeSandbox';
+          iconName = 'align-justify';
+        } else if (route.name === 'ScrollDemo') {
+          iconName = 'angle-double-down';
         }
-        return <AntDesignIcon name={iconName} size={size} color={color} />;
+        return <FontAwesomeIcon name={iconName} size={size} color={color} />;
       },
     })}
     tabBarOptions={{
@@ -26,6 +29,7 @@ const AppTabNavigator = () => (
     }}>
     <Tab.Screen name="Home" component={HomeTab} />
     <Tab.Screen name="StackDemo" component={stackNavigator} />
+    <Tab.Screen name="ScrollDemo" component={ScrollDemo} />
   </Tab.Navigator>
 );
 
